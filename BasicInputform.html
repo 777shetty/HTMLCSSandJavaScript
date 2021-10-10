@@ -52,5 +52,18 @@
            <button>submit</button>
        </div> 
         </form>
+        <script>
+        const text =document.querySelector("#text");
+            const textError = document.querySelector(".text-error");
+            text.oninput=function(){
+                let nameRegex = RegExp("^[A-Z]{1}[A-Za-z]{2,}$");
+                if(nameRegex.test(text.value)){
+                    textError.textContent="";
+                }
+                else{
+                    textError.textContent ="Name is Incorrect:"
+                } 
+            }
+        </script>
     </body>
     </html>
